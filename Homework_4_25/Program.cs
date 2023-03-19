@@ -11,10 +11,19 @@ int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число:");
 int b = Convert.ToInt32(Console.ReadLine()); 
 
-int power = 1;
-for(int i=0;i<b;i++)
+int result = Power(a, b);
+
+System.Console.WriteLine($"Степень {result}");
+
+
+
+int Power(int a, int b)
 {
-  power*=a;
+int power = 1;
+for(int i=0; i < b; i++)
+{
+  power *= a;
 }
 
-System.Console.WriteLine($"Степень {power}");
+  return power;
+}
